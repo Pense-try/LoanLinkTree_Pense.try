@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Links - Seu Nome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url("./Fundo.jpg");
+            
+            background-size: cover;
+        }
+
+        .glass-container {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .link-card {
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 6px 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-size: 14px;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+        }
+
+        .icon-wrapper:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 640px) {
+            .glass-container {
+                margin: 16px;
+                border-radius: 20px;
+                transform: scale(0.98);
+            }
+            
+            .profile-img {
+                width: 96px;
+                height: 96px;
+            }
+
+            .social-icons {
+                gap: 1.5rem;
+                padding-top: 1.5rem;
+                margin-top: 1.5rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="glass-container p-6 max-w-2xl w-full relative">
+        <!-- Cabeçalho -->
+        <div class="flex flex-col items-center mb-6">
+            <img src="./Img_loan.jpg" alt="Sua Foto" 
+                 class="profile-img rounded-full border-2 border-white/10 mb-4 w-32 h-32">
+            <h1 class="text-white text-2xl font-bold mb-2 text-center">Loan Hardem</h1>
+            <p class="text-white/80 text-center text-sm">Desenvolvedor Front-end | Fundador da Pense.try</p>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="space-y-8">
+            <!-- Links Pessoais -->
+            <div class="space-y-4">
+                <div class="flex flex-col gap-4">
+                    <a href="[LINK-PORTFOLIO]" target="_blank" 
+                       class="link-card flex items-center justify-center p-4 rounded-xl hover:bg-white/10 transition-all">
+                        <i class="fas fa-briefcase text-gray-300 text-xl mr-2"></i>
+                        <span class="text-gray-100">Portfólio Pessoal</span>
+                    </a>
+                    
+                    <a href="https://wa.me/5543996145479" target="_blank" 
+                       class="link-card flex items-center justify-center p-4 rounded-xl hover:bg-white/10 transition-all">
+                        <i class="fab fa-whatsapp text-gray-300 text-xl mr-2"></i>
+                        <span class="text-gray-100">WhatsApp Pessoal</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Seção Empresa -->
+            <div class="space-y-4">
+                <h2 class="text-gray-300 text-lg font-semibold mb-4 text-center">Pense.try</h2>
+                <div class="flex flex-col gap-4">
+                    <a href="https://pensetry.com.br" target="_blank" 
+                       class="link-card flex items-center justify-center p-4 rounded-xl hover:bg-white/10 transition-all">
+                        <i class="fas fa-briefcase text-gray-300 text-xl mr-2"></i>
+                        <span class="text-gray-100">Site Oficial</span>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/_pense.try?igsh=MTB6a2lrNzFoM3FkZg==" target="_blank" 
+                       class="link-card flex items-center justify-center p-4 rounded-xl hover:bg-white/10 transition-all">
+                        <i class="fab fa-instagram text-gray-300 text-xl mr-2"></i>
+                        <span class="text-gray-100">Instagram | Pense.try</span>
+                    </a>
+
+                    <a href="https://github.com/Pense-try" target="_blank" 
+                       class="link-card flex items-center justify-center p-4 rounded-xl hover:bg-white/10 transition-all">
+                        <i class="fab fa-github text-gray-300 text-xl mr-2"></i>
+                        <span class="text-gray-100">GitHub | Pense.try</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="social-icons flex justify-center">
+                <div class="icon-wrapper relative">
+                    <a href="https://www.instagram.com/loanhardem?utm_source=qr&igsh=M3UxdGozY2RkNnM2" target="_blank" class="p-3 hover:scale-110 transition-all block">
+                        <i class="fab fa-instagram text-2xl text-gray-300"></i>
+                        <span class="tooltip">Meu Instagram</span>
+                    </a>
+                </div>
+                
+                <div class="icon-wrapper relative">
+                    <a href="https://www.linkedin.com/in/loan-hardem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="p-3 hover:scale-110 transition-all block">
+                        <i class="fab fa-linkedin text-2xl text-gray-300"></i>
+                        <span class="tooltip">Meu LinkedIn</span>
+                    </a>
+                </div>
+                
+                <div class="icon-wrapper relative">
+                    <a href="https://github.com/LoaN-Hr" target="_blank" class="p-3 hover:scale-110 transition-all block">
+                        <i class="fab fa-github text-2xl text-gray-300"></i>
+                        <span class="tooltip">Meu GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Suavizar interações
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.transform = 'translateY(-3px)';
+            });
+            
+            link.addEventListener('mouseout', () => {
+                link.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
